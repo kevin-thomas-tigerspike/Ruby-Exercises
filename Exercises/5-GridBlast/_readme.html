@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 6.0.5 (451190)"/><meta name="altitude" content="5.97843599319458"/><meta name="author" content="Kevin Thomas"/><meta name="created" content="2015-04-11 18:38:39 +0000"/><meta name="latitude" content="51.48067181943109"/><meta name="longitude" content="-0.1175400852028621"/><meta name="source" content="desktop.mac"/><meta name="updated" content="2015-04-11 18:43:29 +0000"/><title>Ruby Exercises - Exercise 5: Grid blast!</title></head><body>
+<div style="font-weight: bold; color: rgb(51, 51, 51); text-rendering: optimizelegibility; font-size: 32px; font-style: normal; font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+<div>Exercise 5: Pitch</div>
+</div>
+<div>
+<div style="font-weight: bold; color: rgb(51, 51, 51); text-rendering: optimizelegibility; font-size: 25px; font-style: normal; font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+<div><br/></div>
+<div>Your Task</div><br />
+</div>
+</div>
+<div style="orphans: auto; text-align: start; text-indent: 0px; widows: 1; background-color: rgb(255, 255, 255);">
+<div style="font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div><span style="font-size: 18px;">Ready! Set! Fire... but where should you fire?</span><br/></div>
+</div>
+<div style="font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><span style="font-size: 18px;"><span style="font-family: Helvetica;"><span style="color: rgb(51, 51, 51);"><br/></span></span></span></div>
+<div style="font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div><span style="font-size: 18px;">The battlefield is 3x3 wide grid. HQ has already provided you with an array for easier computing:</span></div>
+</div>
+<div style="font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div><span style="font-size: 18px;"><span style="font-family: Helvetica;"><span style="color: rgb(51, 51, 51);"><br/></span></span></span></div>
+</div>
+<div><code style="box-sizing:border-box;font-weight:normal;background:rgb(0, 0, 0);overflow-x:auto;display:block;color:rgb(197, 200, 198);padding:10px;font-family:CamingoCode-Regular, monospace;font-size:13px;margin-bottom:15px;margin-top:0px;background-color:rgba(0, 0, 0);">grid = [<span style="box-sizing:border-box;color:rgb(181, 189, 104);">'top left'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'top middle'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'top right'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'middle left'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'center'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'middle right'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'bottom left'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'bottom middle'</span>, <span style="box-sizing:border-box;color:rgb(181, 189, 104);">'bottom right'</span>]</code></div>
+<div style="font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div><span style="font-size: 18px;">HQ radios you with 'x' and 'y' coordinates. x=0 y=0 being 'top left' part of the battlefield;</span></div>
+<div><span style="font-size: 18px;"><br/></span></div>
+<div><span style="font-size: 18px;">Your duty is to create a function that takes those Xs and Ys and return the correct grid sector to be hit.</span><br/></div>
+</div>
+<div><br/></div>
+<div>
+<pre style="box-sizing:border-box;margin:0px;padding:0px;font-size:14px;direction:ltr;">
+<code style="box-sizing:border-box;font-weight:normal;background:rgb(0, 0, 0);overflow-x:auto;display:block;color:rgb(197, 200, 198);padding:10px;font-family:CamingoCode-Regular, monospace;font-size:13px;margin-bottom:15px;margin-top:0px;background-color:rgba(0, 0, 0);">fire(<span style="box-sizing:border-box;color:rgb(222, 147, 95);">0</span>,<span style="box-sizing:border-box;color:rgb(222, 147, 95);">0</span>) <span style="box-sizing:border-box;"># 'top left'</span>
+fire(<span style="box-sizing:border-box;color:rgb(222, 147, 95);">1</span>,<span style="box-sizing:border-box;color:rgb(222, 147, 95);">2</span>) <span style="box-sizing:border-box;"># 'bottom middle'</span>
+etc.</code>
+</pre>
+<p style="box-sizing: border-box; margin: 0px; padding: 0px; direction: ltr; font-weight: normal;"><span style="font-size: 18px;">Notice the grid is a monodimensional array, good luck!</span></p>
+</div>
+<div><br/></div>
+</div>
+</body></html>
