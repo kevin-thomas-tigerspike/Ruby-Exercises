@@ -11,7 +11,7 @@ describe 'Converting pitch classes' do
     expect(pitch_class('B')).to equal 11
 
   end
-
+ 
   it 'should convert sharps' do
     expect(pitch_class('C#')).to equal 1
     expect(pitch_class('D#')).to equal 3
