@@ -1,6 +1,15 @@
 require_relative '../Exercises/4-Pitch/pitch'
 
 describe 'Converting pitch classes' do
+  it 'should return nil for invalid input' do
+    expect(pitch_class('')).to equal nil
+    expect(pitch_class('ABC123')).to equal nil
+    expect(pitch_class('Check your inputs')).to equal nil
+    expect(pitch_class('c')).to equal nil
+    expect(pitch_class('cB')).to equal nil
+    expect(pitch_class('d#')).to equal nil
+  end
+
   it 'should convert plain letters' do
     expect(pitch_class('C')).to equal 0
     expect(pitch_class('D')).to equal 2
@@ -9,7 +18,6 @@ describe 'Converting pitch classes' do
     expect(pitch_class('G')).to equal 7
     expect(pitch_class('A')).to equal 9
     expect(pitch_class('B')).to equal 11
-
   end
  
   it 'should convert sharps' do
