@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051)file:///Users/kevin/Desktop/My%20Notes/_readme.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="exporter-version" content="Evernote Mac 6.0.5 (451190)"><meta name="altitude" content="4.794151306152344"><meta name="author" content="Kevin Thomas"><meta name="created" content="2015-04-12 11:11:07 +0000"><meta name="latitude" content="51.48068229120861"><meta name="longitude" content="-0.1175627210139223"><meta name="source" content="desktop.mac"><meta name="updated" content="2015-04-12 11:16:01 +0000"><title>Ruby Exercises - Exercise 8: Anagram Detection</title></head><body>
+<div style=" font-weight: bold; color: rgb(51, 51, 51); text-rendering: optimizelegibility; font-size: 32px; font-style: normal; font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+<div>Exercise 8:&nbsp;Anagram Detection</div>
+</div>
+<div>
+<div style=" font-weight: bold; color: rgb(51, 51, 51); text-rendering: optimizelegibility; font-size: 25px; font-style: normal; font-variant: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);">
+<div><br></div>
+<div>Your Task</div><br>
+</div>
+</div>
+<div style="orphans: auto; text-align: start; text-indent: 0px; widows: 1; background-color: rgb(255, 255, 255);">
+<div style="font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+<div>
+<p style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;font-weight:normal;margin-bottom:16px;">An <strong style="box-sizing:border-box;font-weight:bold;">anagram</strong> is the result of rearranging the letters of a word to produce a new word. (<em style="box-sizing:border-box;font-style:italic;">Ref wikipedia</em>).</p>
+</div>
+<div style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;font-weight:normal;margin-bottom:16px;">
+<div><em style="box-sizing:border-box;font-style:italic;">Note: anagrams are case and punctuation insensitive</em></div>
+</div>
+<div style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;font-weight:normal;margin-bottom:16px;">
+<div>Examples</div>
+</div>
+<ul style="box-sizing: border-box; margin: 0px 0px 16px 15px; padding: 0px 0px 0px 15px; direction: ltr; list-style: disc;">
+<li style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;">
+<div style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;font-weight:normal;margin-bottom:0px;"><b>Creative</b> is an anagram of <b>Reactive</b></div>
+</li>
+<li>
+<div style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;font-weight:normal;margin-bottom:0px;"><strong style="box-sizing:border-box;font-weight:bold;">Buckethead</strong> is an anagram of <strong style="box-sizing:border-box;font-weight:bold;">Death Cube K</strong></div>
+</li>
+<li><b>Edward Gorey</b> is an anagram of <b>E. G. Deadworry</b><b><span style="font-family: Lato, &#39;Helvetica Neue&#39;, Helvetica, sans-serif;"><br></span></b></li>
+</ul>
+<div><br></div>
+<div style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;font-weight:normal;margin-bottom:16px;margin-top:15px;">
+<div>The challenge is to write the function <code style="box-sizing:border-box;font-weight:normal;background:rgb(255, 255, 153);font-family:CamingoCode-Regular, monospace;display:inline;padding:3.33333px;margin-bottom:15px;overflow-x:auto;margin-top:10px;background-color:rgba(0, 0, 0, 0.4);border-radius:3px;border:1px solid rgba(255, 255, 255, 0.121569);">is_anagram</code> to return <em style="box-sizing:border-box;font-style:italic;">true</em> if the word <code style="box-sizing:border-box;font-weight:normal;background:rgb(255, 255, 153);font-family:CamingoCode-Regular, monospace;display:inline;padding:3.33333px;margin-bottom:15px;overflow-x:auto;margin-top:10px;background-color:rgba(0, 0, 0, 0.4);border-radius:3px;border:1px solid rgba(255, 255, 255, 0.121569);">test</code> is an anagram of the word <code style="box-sizing:border-box;font-weight:normal;background:rgb(255, 255, 153);font-family:CamingoCode-Regular, monospace;display:inline;padding:3.33333px;margin-bottom:15px;overflow-x:auto;margin-top:10px;background-color:rgba(0, 0, 0, 0.4);border-radius:3px;border:1px solid rgba(255, 255, 255, 0.121569);">original</code> and <em style="box-sizing:border-box;font-style:italic;">false</em> otherwise. The function prototype is as given below:</div>
+</div>
+<div>
+<div style="box-sizing: border-box; margin: 0px; padding: 0px; font-size: 14px; direction: ltr;">
+<pre style="box-sizing: border-box; margin: 0px; padding: 0px; font-size: 14px; direction: ltr;"><code style="box-sizing: border-box; font-weight: normal; background-color: rgba(0, 0, 0, 1); overflow-x: auto; display: block; padding: 10px; font-family: CamingoCode-Regular, monospace; font-size: 13px; margin-bottom: 15px; margin-top: 0px;"><span style="color: rgb(197, 200, 198);"><span style="box-sizing:border-box;color:rgb(129, 162, 190);"><span style="box-sizing:border-box;color:rgb(178, 148, 187);">def</span> </span>is_anagram(test, original)</span><br><font color="#DDDDDD"><font color="#C5C8C6"><span style="color: rgb(197, 200, 198); box-sizing: border-box;">&nbsp;&nbsp;#your code here</span><font color="#C5C8C6"><span style="color: rgb(178, 148, 187); box-sizing: border-box;"><br>end</span></font></font></font></code><font color="#DDDDDD"><font color="#C5C8C6"><font color="#C5C8C6">
+</font></font></font></pre></div><font color="#DDDDDD"><font color="#C5C8C6"><font color="#C5C8C6">
+<div style="box-sizing:border-box;margin:0px;padding:0px;font-size:16px;direction:ltr;margin-top:15px;margin-bottom:0px;">
+<div><br></div>
+</div>
+</font></font></font></div><font color="#DDDDDD"><font color="#C5C8C6"><font color="#C5C8C6">
+<div><br></div>
+</font></font></font></div><font color="#DDDDDD"><font color="#C5C8C6"><font color="#C5C8C6">
+</font></font></font></div><font color="#DDDDDD"><font color="#C5C8C6"><font color="#C5C8C6">
+</font></font></font></body></html>
